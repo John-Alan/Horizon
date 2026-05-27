@@ -1,0 +1,34 @@
+{
+  "ai": {
+    "provider": "openai",
+    "model": "deepseek-chat",
+    "base_url": "https://api.deepseek.com/v1",
+    "api_key_env": "DEEPSEEK_API_KEY"
+  },
+  "sources": {
+    "hackernews": {
+      "enabled": true,
+      "min_score": 50,
+      "limit": 30
+    },
+    "rss": [
+      { "name": "36Kr", "url": "https://36kr.com/feed" },
+      { "name": "Hacker News Best", "url": "https://hnrss.org/best" },
+      { "name": "TechCrunch", "url": "https://techcrunch.com/feed/" }
+    ],
+    "reddit": [
+      { "name": "r/artificial", "subreddit": "artificial", "limit": 20 },
+      { "name": "r/MachineLearning", "subreddit": "MachineLearning", "limit": 20 }
+    ],
+    "github": {
+      "trending": true
+    }
+  },
+  "filtering": {
+    "ai_score_threshold": 6.0
+  },
+  "output": {
+    "language": ["en", "zh"],
+    "save_to_file": true
+  }
+}
